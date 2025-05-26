@@ -1,0 +1,145 @@
+-- Apache Programming Language Concept --
+
+goal -> a low level language that is simple to understand, clean and efficient; todo!() after Pyxis;
+
+
+-- Basic Concept -- A simple hello world
+----------------------------------------
+
+<write>
+
+dec str -> "Hello World"
+
+exec test_function(char[s1], char[s2])
+	s1 -> 'a'
+	s2 -> 'b'
+
+	print(s1 + s2) #prints out the ascii value i assume
+	return (s1 + s2)
+
+exec main()
+	print(str)
+
+
+
+
+-- Variable Scoping --
+----------------------
+
+dec number -> 0 #Global Variable
+
+fix proc -> false #Constant or Immutable
+
+exec test_function()
+	shadow number -> 4 #Shadowing Global Variable
+
+	dec second -> 3 #Local Variable
+
+
+
+
+-- Flow Syntax --
+-----------------
+
+<write>
+
+exec checkHealth(int[health])
+	if [health > 50]
+		print("You're all good", '\n')
+	elif [health > 20]
+		print("You're injured", '\n')
+	else
+		print("You're in danger", '\n')
+
+
+
+
+-- Loops --
+-----------
+
+exec countToTen()
+	dec i -> 0
+	loop [i < 3]
+		i++
+
+
+
+
+-- OOP - Objects --
+-------------------
+
+<objects>
+<write>
+
+class Player
+	dec health >: Int
+	dec str >: String -> null
+
+	exec takeDamage(dec amount) <- Void
+		self.health -- amount
+		if [self.health -< 0]
+			print("{string} has died", self.name)
+		
+
+
+
+-- Concurrency --
+-----------------
+
+<concurrency>
+<write>
+
+createThread() = create a thread
+createMutex() = create a mutex
+lockMutex() = lock a mutex
+unlockMutex() = unlock a mutex
+
+parellel [example]
+	task()
+	task2()
+
+actor Worker()
+	exec process(int[data])
+		print("Processing : {int}", data)
+
+
+
+
+-- Error Handling --
+--------------------
+
+exec divide(dec a, dec b)
+	if [b <> 0]
+		error("Error: Cannot divide by zero")
+	else
+		return(a / b)
+
+
+
+
+-- Pointers & Memory --
+
+pointer buffer -> alloc(128) #Allocates 128 bytes to the heap as a safe reference
+
+auto buffer -> alloc(128) #Allocates 128 bytes to the heap but automatically frees at end of scope
+
+unsafe buffer -> alloc(128) #Allocates 128 bytes to the heap as is
+
+pointer? buffer -> null
+
+free(buffer)
+
+#safe checking for null pointers
+
+if [buffer <!> null]
+	print(buffer[0])
+
+
+
+
+-- Allocation --
+
+alloc(128) -> Standard bytes
+alloc(int, 10) -> Allocates space for 10 integars
+alloc(char, 4) -> Allocated spcae for 4 Characters
+
