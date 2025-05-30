@@ -10,7 +10,7 @@ goal -> a low level language that is simple to understand, clean and efficient; 
 
 dec str -> "Hello World"
 
-exec test_function(char[s1], char[s2])
+exec test_function(s1, s2)
 	s1 -> 'a'
 	s2 -> 'b'
 
@@ -43,7 +43,7 @@ exec test_function()
 
 <write>
 
-exec checkHealth(int[health])
+exec checkHealth(health)
 	if [health > 50]
 		print("You're all good", '\n')
 	elif [health > 20]
@@ -75,7 +75,7 @@ class Player
 	dec health >: Int
 	dec str >: String -> null
 
-	exec takeDamage(dec amount) <- Void
+	exec takeDamage(amount) <- Void
 		self.health -- amount
 		if [self.health -< 0]
 			print("{string} has died", self.name)
@@ -94,7 +94,7 @@ createMutex() = create a mutex
 lockMutex() = lock a mutex
 unlockMutex() = unlock a mutex
 
-parellel [example]
+parellel:
 	task()
 	task2()
 
