@@ -63,3 +63,15 @@
 
 ::
   Allow Access
+
+<<
+  Shift Left Bit
+
+>>
+  Shift Right Bit
+
+|
+  Pipe / Or Bit
+
+&
+  And Bit
