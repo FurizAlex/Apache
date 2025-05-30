@@ -75,3 +75,6 @@
 
 &
   And Bit
+
+>:
+  Explicit Type
