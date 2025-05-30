@@ -1,0 +1,65 @@
+->
+  Equals
+
++
+  Plus
+
+-
+  Minus
+
+*
+  Multiply
+
+/
+  Divide
+
+%
+  Modulus
+
+++
+  Plus Equals
+
+--
+  Minus Equals
+
+**
+  Multiply Equal
+
+//
+  Divide Equals
+
+%%
+  Modulus Equals
+
+&&
+  And
+
+||
+  or
+
+<>
+  Equals Eqyals
+
+<!>
+  Is not Equals
+
+!
+  Not
+
+<
+  Lesser
+
+>
+  Greaater
+
+<]
+  Lesser Equals
+
+[>
+  Greater Equals
+
+:
+  Then
+
+::
+  Allow Access
