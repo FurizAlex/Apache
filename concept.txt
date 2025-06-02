@@ -8,7 +8,7 @@ goal -> a low level language that is simple to understand, clean and efficient; 
 
 <write>
 
-dec str -> "Hello World"
+dec str -> "Hello World" #Automatic Type Inference // String
 
 exec test_function(s1, s2)
 	s1 -> 'a'
