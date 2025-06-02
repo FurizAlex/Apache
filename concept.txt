@@ -117,6 +117,14 @@ exec divide(dec a, dec b)
 
 
 
+-- Macros --
+------------
+
+#Macro X -> 64
+#Macro Y -> "String"
+#Macro apple_color -> Class::Apple.color
+
+
 -- Pointers & Memory --
 
 pointer buffer -> alloc(128) #Allocates 128 bytes to the heap as a safe reference
