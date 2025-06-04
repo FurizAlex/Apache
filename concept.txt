@@ -11,14 +11,18 @@ goal -> a low level language that is simple to understand, clean and efficient; 
 dec str -> "Hello World" #Automatic Type Inference // String
 
 exec test_function(s1, s2)
+{
 	s1 -> 'a'
 	s2 -> 'b'
 
 	print(s1 + s2) #prints out the ascii value i assume
 	return (s1 + s2)
+}
 
 exec main()
+{
 	print(str)
+}
 
 
 
@@ -31,9 +35,11 @@ dec number -> 0 #Global Variable
 fix proc -> false #Constant or Immutable
 
 exec test_function()
+{
 	shadow number -> 4 #Shadowing Global Variable
 
 	dec second -> 3 #Local Variable
+}
 
 
 
@@ -44,12 +50,14 @@ exec test_function()
 <write>
 
 exec checkHealth(health)
-	if [health > 50]
+{
+	if (health > 50)
 		print("You're all good", '\n')
-	elif [health > 20]
+	elif (health > 20)
 		print("You're injured", '\n')
 	else
 		print("You're in danger", '\n')
+}
 
 
 
@@ -58,10 +66,11 @@ exec checkHealth(health)
 -----------
 
 exec countToTen()
+{
 	dec i -> 0
-	loop [i < 3]
+	loop (i < 3)
 		i++
-
+}
 
 
 
@@ -76,9 +85,11 @@ class Player
 	dec str >: String -> null
 
 	exec takeDamage(amount) <- Void
+	{
 		self.health -- amount
-		if [self.health -< 0]
+		if (self.health -< 0)
 			print("{string} has died", self.name)
+	}
 		
 
 
@@ -100,7 +111,9 @@ parellel:
 
 actor Worker()
 	exec process(int[data])
+	{
 		print("Processing : {int}", data)
+	}
 
 
 
@@ -109,10 +122,12 @@ actor Worker()
 --------------------
 
 exec divide(dec a, dec b)
-	if [b <> 0]
+{
+	if (b <> 0)
 		error("Error: Cannot divide by zero")
 	else
 		return(a / b)
+}
 
 
 
@@ -151,3 +166,32 @@ alloc(128) -> Standard bytes
 alloc(int, 10) -> Allocates space for 10 integars
 alloc(char, 4) -> Allocated spcae for 4 Characters
 
+
+
+-- Headers --
+
+<write> -> for reading, writing, opening a FD
+
+<concurrency> -> for concurrency
+
+<objects> -> for objects
+
+<signal> -> for signals
+
+<iso> -> convert symbols to readable text [&& -> and]
+
+<io> -> for stdin & stdout
+
+<arguments> -> for arguments
+
+<math> -> for math stuff
+
+<library> -> the standard apache library
+
+<atomic> -> for atomic variables
+
+<time> -> for time related things
+
+<error> -> for easier error managment
+
+<vector> -> for vector

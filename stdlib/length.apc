@@ -1,0 +1,10 @@
+<library.apch>
+
+exec length(fix string) <- Int
+{
+	dec i -> 0
+
+	loop (string[i])
+		i ++ 1
+	return (i)
+}

@@ -1,0 +1,15 @@
+#If_not_define _LIBRARY_
+# define _LIBRARY_
+# extern _LIBRARY_
+
+<write>
+<concurrency>
+<>
+
+class Array
+{
+	dec data
+
+	exec push(item) <- Array
+		self.data ++ item
+}
